@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:/TP1_MIRANDA/TP1_MIRANDA.sch</source>
+    <date>07/06/2017 11:16:41 a.m.</date>
+    <tool>Eeschema 4.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>TP1_MIRANDA.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U1">
+      <value>CNY70</value>
+      <footprint>EESTN5:CNY70</footprint>
+      <libsource lib="EESTN5" part="CNY70"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59038749</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>TB_1X3</value>
+      <footprint>EESTN5:Pin_Header_3</footprint>
+      <libsource lib="EESTN5" part="TB_1X3"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>590C7253</tstamp>
+    </comp>
+    <comp ref="H1">
+      <value>Mounting_Hole</value>
+      <footprint>EESTN5:hole_3mm</footprint>
+      <libsource lib="EESTN5" part="Mounting_Hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59380A72</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>R</value>
+      <footprint>EESTN5:R_1206</footprint>
+      <libsource lib="EESTN5" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59380BA8</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>R</value>
+      <footprint>EESTN5:R_1206</footprint>
+      <libsource lib="EESTN5" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59380BD9</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="EESTN5" part="CNY70">
+      <description>DIP4, Refective Sensor</description>
+      <docs>http://www.vishay.com/docs/83751/cny70.pdf</docs>
+      <footprints>
+        <fp>CNY*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">CNY70</field>
+        <field name="Footprint">CNY70</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="EESTN5" part="Mounting_Hole">
+      <description>Mounting Hole without connection</description>
+      <footprints>
+        <fp>Mounting?Hole*</fp>
+        <fp>Hole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">Mounting_Hole</field>
+      </fields>
+    </libpart>
+    <libpart lib="EESTN5" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R*</fp>
+        <fp>SM0603</fp>
+        <fp>SM0805</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="EESTN5" part="TB_1X3">
+      <footprints>
+        <fp>BORNERA*</fp>
+        <fp>TB*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">TB_1X3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+        <pin num="3" name="~" type="input"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="EESTN5">
+      <uri>C:\TP1_MIRANDA\Librerias Kicad\EESTN5.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(R1-Pad2)">
+      <node ref="U1" pin="1"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="2" name="/OUT">
+      <node ref="R2" pin="2"/>
+      <node ref="U1" pin="3"/>
+      <node ref="J1" pin="1"/>
+    </net>
+    <net code="3" name="GND">
+      <node ref="U1" pin="2"/>
+      <node ref="U1" pin="4"/>
+      <node ref="J1" pin="3"/>
+    </net>
+    <net code="4" name="VCC">
+      <node ref="R2" pin="1"/>
+      <node ref="R1" pin="1"/>
+      <node ref="J1" pin="2"/>
+    </net>
+  </nets>
+</export>
